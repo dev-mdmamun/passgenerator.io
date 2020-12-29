@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator | Dev Md Mamun</title>
+  </head>
+  <body>
+    <div class="pg-container bg-dark text-light">
+      <div class="pg-theme text-center">
+        <input type="checkbox" name="theme" id="switch" />
+        <label for="switch" id="theme-lable">Light mode</label>
+      </div>
+      <h2 class="mb-3 text-success">Get Rendom Password</h2>
+      <div class="pg-body">
+        <div class="form-pg">
+          <label for="length">password Length</label>
+          <input id="length" value="10" min="8" max="32" type="number" />
+        </div>
+        <div class="form-pg">
+          <label for="uppercase">Contain Uppercase Letter</label>
+          <input id="uppercase" type="checkbox" checked />
+        </div>
+        <div class="form-pg">
+          <label for="lowercase">Contain Lowercase Letter</label>
+          <input id="lowercase" type="checkbox" checked />
+        </div>
+        <div class="form-pg">
+          <label for="numbers">Contain Numbers</label>
+          <input id="numbers" type="checkbox" checked />
+        </div>
+        <div class="form-pg">
+          <label for="symbol">Contain Symbols</label>
+          <input id="symbol" type="checkbox" checked />
+        </div>
+      </div>
+      <div class="text-center">
+        <input
+          type="submit"
+          class="btn btn-lg btn-success mt-3"
+          id="generate"
+          value="Generate"
+        />
+        <input
+          type="submit"
+          id="copy"
+          class="btn btn-lg btn-info mt-3"
+          value="Copy"
+        />
+      </div>
+      <div class="text-center text-success mt-3" id="massage"></div>
+      <div class="bg-footer">
+        <div id="passarea" class="gp mt-3"></div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

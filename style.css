@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --bg: #0e0d0d;
+}
+html[data-theme="dark"] {
+  --bg: white;
+}
+body {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  font-weight: bold;
+  background-color: var(--bg);
+}
+.pg-container {
+  width: 30%px;
+  padding: 1rem;
+  border-radius: 7px;
+}
+.gp {
+  background-color: #8a8888;
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.form-pg {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.pg-theme input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.pg-theme label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: gray;
+  border-radius: 100px;
+  position: relative;
+}
+
+.pg-theme label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 70px;
+  transition: 0.5s;
+}
+
+.pg-theme input:checked + label {
+  background: #3c3ca7;
+}
+
+.pg-theme input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.pg-theme label:active:after {
+  width: 50px;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
