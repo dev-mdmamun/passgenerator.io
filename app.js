@@ -1,3 +1,4 @@
+//Calling some essential variable
 const lengthElement = document.getElementById("length");
 const uppercaseElement = document.getElementById("uppercase");
 const lowercaseElement = document.getElementById("lowercase");
@@ -10,13 +11,13 @@ const upperLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "1234567890";
 const symbol = "!@#$%^&*()_-+=|}{][?/.,";
-
+//Event listener
 generateElement.addEventListener("click", generatePassword);
 copyElement.addEventListener("click", () => {
   document.getElementById("massage").innerText =
     "Password copied to clipboard";
 });
-
+//function
 function getLowerCase() {
   return lowerLetter[Math.floor(Math.random() * lowerLetter.length)];
 }
