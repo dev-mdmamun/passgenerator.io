@@ -22,7 +22,7 @@ body {
   background-color: var(--bg);
 }
 .pg-container {
-  width: 30%px;
+  width: 30%;
   padding: 1rem;
   border-radius: 7px;
 }
