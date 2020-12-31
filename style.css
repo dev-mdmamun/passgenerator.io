@@ -42,7 +42,15 @@ body {
   margin: 0.5rem 0;
 }
 #length {
-  width: 70px;
+  width: 50px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  -moz-appearance: textfield;
+}
+#length::-webkit-outer-spin-button, #length::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /*Style for mode toggle */
 .pg-theme input[type="checkbox"] {
