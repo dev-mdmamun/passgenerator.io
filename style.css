@@ -41,6 +41,9 @@ body {
   justify-content: space-between;
   margin: 0.5rem 0;
 }
+#length {
+  width: 70px;
+}
 /*Style for mode toggle */
 .pg-theme input[type="checkbox"] {
   height: 0;
