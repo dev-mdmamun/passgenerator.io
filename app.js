@@ -6,17 +6,14 @@ const numbersElement = document.getElementById("numbers");
 const symbolElement = document.getElementById("symbol");
 const generateElement = document.getElementById("generate");
 const copyElement = document.getElementById("copy");
-const passareaElement = document.getElementById("passarea");
+const passareaElement = document.getElementById("passarea");  
+var massageOpacity = document.getElementById("massage");
 const upperLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetter = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "1234567890";
 const symbol = "!@#$%^&*()_-+=|}{][?/.,";
 //Event listener
 generateElement.addEventListener("click", generatePassword);
-copyElement.addEventListener("click", () => {
-  document.getElementById("massage").innerText =
-    "Password copied to clipboard";
-});
 //function
 function getLowerCase() {
   return lowerLetter[Math.floor(Math.random() * lowerLetter.length)];
@@ -81,7 +78,6 @@ function generateX() {
   return xs[Math.floor(Math.random() * xs.length)];
 }
 
-
 copyElement.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
   const password = passareaElement.innerText;
@@ -95,20 +91,13 @@ copyElement.addEventListener("click", () => {
   document.execCommand("copy");
   textarea.remove();
 });
-// dark mode check box
-var themeCheckbok = document.querySelector("input[name=theme]");
-themeCheckbok.addEventListener("change", function () {
-  if (this.checked) {
-    trans();
-    document.documentElement.setAttribute("data-theme", "dark");
-  } else {
-    trans();
-    document.documentElement.setAttribute("data-theme", "light");
-  }
-});
-let trans = () => {
-  document.documentElement.classList.add("transition");
-  window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
-  });
-};
+copyElement.addEventListener("click", showMassage);
+function showMassage() {
+  massageOpacity.classList.add("show");
+  massageOpacity.classList.remove("massage");
+}
+function hide() {
+  massageOpacity.classList.add("massage");
+  massageOpacity.classList.remove("show")
+}
+let myGreeting = setInterval(hide, 6000);

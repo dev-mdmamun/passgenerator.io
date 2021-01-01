@@ -13,14 +13,8 @@
   </head>
   <body>
     <!--container-->
-    <div class="pg-container bg-dark text-light">
-      <!--dark mode / light mode-->
-      <div class="pg-theme text-center">
-        <input type="checkbox" name="theme" id="switch" />
-        <label for="switch" id="theme-lable">Light mode</label>
-      </div>
-      <!--header-->
-      <h2 class="mb-3 text-success text-center">Get Rendom Password</h2>
+    <div class="pg-container text-center bg-dark text-light">
+      <h2 class="mb-5 mt-3 text-success">Get Strong Password</h2>
       <!--body-->
       <div class="pg-body">
         <div class="form-pg">
@@ -45,26 +39,24 @@
         </div>
       </div>
       <!--buttons-->
-      <div class="text-center">
+      <div class="my-3 text-center">
         <input
           type="submit"
-          class="btn btn-lg btn-success mt-3"
+          class="btn btn-lg btn-success"
           id="generate"
           value="Generate"
         />
         <input
           type="submit"
           id="copy"
-          class="btn btn-lg btn-info mt-3"
+          class="btn btn-lg btn-info"
           value="Copy"
         />
       </div>
       <!--massage-->
-      <div class="text-center text-success mt-3" id="massage"></div>
+      <div class="text-success my-3 massage" id="massage">Password Copied to the clipboard</div>
       <!--footer-->
-      <div class="bg-footer">
         <div id="passarea" class="gp mt-3"></div>
-      </div>
     </div>
     <script src="app.js"></script>
   </body>
