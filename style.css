@@ -13,16 +13,8 @@ body {
   min-height: 100vh;
   font-weight: bold;
   background: #bdc3c7;
-  background: -webkit-linear-gradient(
-    to right,
-    #2c3e50,
-    #bdc3c7
-  );
-  background: linear-gradient(
-    to right,
-    #2c3e50,
-    #bdc3c7
-  );
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
 .pg-container {
   width: 365px;
@@ -53,7 +45,8 @@ body {
   outline: none;
   -moz-appearance: textfield;
 }
-#length::-webkit-outer-spin-button, #length::-webkit-inner-spin-button {
+#length::-webkit-outer-spin-button,
+#length::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
